@@ -1,0 +1,35 @@
+<messaging:emailTemplate subject="Quote for {!relatedTo.Quote__r.SBQQ__BillingName__c}, ACV = {!relatedTo.Quote__r.ACV__c} has been approved" 
+    recipientType="User" 
+    relatedToType="sbaa__Approval__c"
+    replyTo="approvalemailhandler@10cjdk02p5m9p5zqa6gdglgk1w5g4lfxsgx91px4rr7me1esli.q-btjheao.cs21.apex.sandbox.salesforce.com">
+    
+    <messaging:HtmlEmailBody >
+    
+<html>
+<body>
+The following quote has been approved:
+
+<p/>
+<b>Quote Name:</b>&nbsp;<apex:outputLink value="https://test.salesforce.com/{!relatedTo.Quote__r.Id}" >{!relatedTo.Quote__r.Name}</apex:outputLink><br/>
+<b>Opportunity Name:</b>&nbsp;<apex:outputLink value="https://test.salesforce.com/{!relatedTo.Quote__r.SBQQ__Opportunity__r.Id}" >{!relatedTo.Quote__r.SBQQ__Opportunity__r.Name}</apex:outputLink><br/>
+<b>Opportunity Owner:</b>{!relatedTo.Quote__r.SBQQ__Opportunity__r.Owner.Name}<br/>
+
+<!-- Quote Line Items -->
+<p/>
+<b>Quote Lines:</b><br/>
+<sbaa:relatedList recordId="{!relatedTo.Quote__c}" relationshipName="SBQQ__LineItems__r" fieldSetName="Approval_Request"/>
+<p/>
+
+<!-- List of Approvers -->
+<p/>
+<b>Approvals:</b><br/>
+<sbaa:relatedList recordId="{!relatedTo.Quote__c}" relationshipName="Approvals__r" fieldSetName="Email_Fields"/>
+<p/>
+
+
+<p style="color:white"><apex:outputText value="{!relatedTo.Id}"/></p>
+
+</body>
+</html>
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>

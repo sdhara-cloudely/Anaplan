@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalChain__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Approval chain to which this rule belongs.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Approval chain to which this rule belongs.</inlineHelpText>
+        <label>Approval Chain</label>
+        <referenceTo>sbaa__ApprovalChain__c</referenceTo>
+        <relationshipLabel>Approval Rules</relationshipLabel>
+        <relationshipName>ApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalStep__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approval Step</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovalTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approval Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Approved Approval Rules</relationshipLabel>
+        <relationshipName>ApprovedApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovedValueField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the field on record that sources approved value in Approval records.</description>
+        <externalId>false</externalId>
+        <label>Approved Value Field</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Amount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApprovedValueOperator__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Operator used to compare current approved value to approved value stored in the Approval record to determine if approval is necessary.</description>
+        <externalId>false</externalId>
+        <label>Approved Value Operator</label>
+        <picklist>
+            <picklistValues>
+                <fullName>equals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>not equals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>less than</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>less or equals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>greater than</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>greater or equals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>starts with</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ends with</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>contains</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ApproverField__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approver Field</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Created By</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RVP_Approver_ID__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MD_Approver_ID__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approver</label>
+        <referenceTo>sbaa__Approver__c</referenceTo>
+        <relationshipLabel>Approval Rules</relationshipLabel>
+        <relationshipName>ApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__ConditionsMet__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Conditions Met</label>
+        <picklist>
+            <picklistValues>
+                <fullName>All</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Any</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__OverrideField__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Override Field</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Name</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__Parallel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Parallel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RecallTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recall Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Recalled Approval Rules</relationshipLabel>
+        <relationshipName>RecalledApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RejectionTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rejection Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Rejected Approval Rules</relationshipLabel>
+        <relationshipName>RejectedApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__RequestTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Request Template</label>
+        <referenceTo>sbaa__EmailTemplate__c</referenceTo>
+        <relationshipLabel>Approval Rules (Requested)</relationshipLabel>
+        <relationshipName>RequestedApprovalRules</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>sbaa__TargetObject__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Target Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SBQQ__Quote__c</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Approval Rule</label>
+    <listViews>
+        <fullName>sbaa__ActiveRules</fullName>
+        <columns>NAME</columns>
+        <columns>sbaa__ApprovalStep__c</columns>
+        <columns>sbaa__Approver__c</columns>
+        <columns>sbaa__ApproverField__c</columns>
+        <columns>sbaa__ConditionsMet__c</columns>
+        <columns>sbaa__Parallel__c</columns>
+        <columns>sbaa__ApprovalChain__c</columns>
+        <columns>sbaa__RequestTemplate__c</columns>
+        <columns>sbaa__ApprovalTemplate__c</columns>
+        <columns>sbaa__RejectionTemplate__c</columns>
+        <columns>sbaa__RecallTemplate__c</columns>
+        <columns>sbaa__Active__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>sbaa__Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Rules</label>
+    </listViews>
+    <listViews>
+        <fullName>sbaa__All</fullName>
+        <columns>NAME</columns>
+        <columns>sbaa__ApprovalStep__c</columns>
+        <columns>sbaa__TargetObject__c</columns>
+        <columns>sbaa__ConditionsMet__c</columns>
+        <columns>sbaa__Parallel__c</columns>
+        <columns>sbaa__ApprovalChain__c</columns>
+        <columns>sbaa__Active__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Rule Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Approval Rules</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>sbaa__TargetObject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__ApprovalStep__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__Approver__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__ApproverField__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__ApprovalTemplate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__RequestTemplate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__RejectionTemplate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>sbaa__RecallTemplate__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

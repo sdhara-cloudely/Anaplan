@@ -1,0 +1,4562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>SBQQ__QuoteHelp</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Sales quote for a given opportunity. There may be multiple quotes for a single opportunity.</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fieldSets>
+        <fullName>SBQQ__CalculatingFields</fullName>
+        <description>Quote fields that trigger recalculation of quote lines.</description>
+        <displayedFields>
+            <field>SBQQ__Primary__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__CustomerDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__DistributorDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__EndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__FirstSegmentTermEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__MarkupRate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__PartnerDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__SubscriptionTerm__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Use_Case__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ContractedAccountID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Calculating Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>SBQQ__LineEditor</fullName>
+        <availableFields>
+            <field>SBQQ__AdditionalDiscountAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__AverageCustomerDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__AveragePartnerDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__BillingCity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__BillingCountry__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__BillingName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__BillingPostalCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__BillingState__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__BillingStreet__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__CustomerAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__DeliveryMethod__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__DistributorDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ExpirationDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__FirstSegmentTermEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__Introduction__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ListAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__MarkupRate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__NetAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__PartnerDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__Partner__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__PaymentTerms__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__PrimaryContact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__RegularAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ShippingCity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ShippingCountry__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ShippingName__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ShippingPostalCode__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ShippingState__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__ShippingStreet__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__TargetCustomerAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SBQQ__TotalCustomerDiscountAmount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Quote fields displayed in Edit Lines page above the line items table.</description>
+        <displayedFields>
+            <field>SBQQ__StartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__SubscriptionTerm__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__EndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SBQQ__CustomerDiscount__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Line Editor</label>
+    </fieldSets>
+    <fields>
+        <fullName>ACV__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__NetAmount__c / (   Calculated_Subscription_Term__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Capacity_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Capacity End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Capacity__c</fullName>
+        <defaultValue>5</defaultValue>
+        <externalId>false</externalId>
+        <label>Additional Capacity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__AdditionalDiscountAmount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Additional Discount Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Email_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Case ( SBQQ__Opportunity__r.Sales_Region__c,
+&quot;Americas&quot;, &quot;ar.amer@anaplan.com&quot;,
+&quot;EMEA&quot;, &quot;ar.emea@anaplan.com&quot;,
+&quot;APAC&quot;, &quot;ar.apac@anaplan.com&quot;,
+&quot;ar.amer@anaplan.com&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Anaplan Email Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_Address_Line_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity - Address Line 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_Address_Line_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity - Address Line 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity Country</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity - Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_Postal_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Anaplan_Entity_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Anaplan Entity State</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Annual_Discounted_List_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Discounted List Total</label>
+        <summarizedField>SBQQ__QuoteLine__c.Annual_Discounted_List_Price__c</summarizedField>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Annual_List_Subscription_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual List Subscription Total</label>
+        <summarizedField>SBQQ__QuoteLine__c.Annual_List_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Is_Subscription__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Annual_List_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual List Total</label>
+        <summarizedField>SBQQ__QuoteLine__c.Annual_List_Price__c</summarizedField>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Net_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Subscription Net Total</label>
+        <summarizedField>SBQQ__QuoteLine__c.Net_Unit_Price_ACV_Rollup__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Is_Subscription__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>ApprovalStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Auto_Renewal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Auto-Renewal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Average_Discount_per_Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (SBQQ__RegularAmount__c = 0, 
+0,
+( (SBQQ__RegularAmount__c -  SBQQ__NetAmount__c) /  SBQQ__RegularAmount__c ))</formula>
+        <label>Average Discount (per Product)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Address_Line_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.MailingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact - Address Line 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Address_Line_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.MailingCity + &apos;, &apos; +  
+Billing_Contact__r.MailingState + &apos; &apos; +  
+Billing_Contact__r.MailingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact - Address Line 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.MailingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact - Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact - Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Fax__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.Fax</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact - Fax</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.Full_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Billing Contact - Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Billing Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Quotes (Billing Contact)</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Justification__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter your justification before submitting for approvals</inlineHelpText>
+        <label>Business Justification</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Calculated_End_Date_Old__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculated End Date (Used For Display)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Calculated_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT( ISBLANK( SBQQ__EndDate__c ) ) ,
+SBQQ__EndDate__c ,
+DATE( YEAR( SBQQ__StartDate__c ) +
+floor( ( MONTH( SBQQ__StartDate__c ) +  Calculated_Subscription_Term__c  - 1 ) / 12 ) ,
+mod( MONTH( SBQQ__StartDate__c ) +  Calculated_Subscription_Term__c  - 1 , 12 ) + 1 ,
+DAY( SBQQ__StartDate__c ) ) - 1
+)</formula>
+        <label>Calculated End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Calculated_Subscription_Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( SBQQ__SubscriptionTerm__c &gt; 0  , 
+SBQQ__SubscriptionTerm__c ,
+(( SBQQ__EndDate__c  - SBQQ__StartDate__c) / 30.4375)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Calculated Subscription Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capacity_GB__c</fullName>
+        <externalId>false</externalId>
+        <formula>5 *  Workspace_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Capacity (GB)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Term_Approval__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( SBQQ__SubscriptionTerm__c &lt; 36 &amp;&amp; Net_Amount_ACV__c &lt; 250000, &apos;MD Approval&apos;, 
+    IF (SBQQ__SubscriptionTerm__c &lt; 36 &amp;&amp; Net_Amount_ACV__c &gt; 250000, &apos;CEO Approval&apos;, &apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Term Approval</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractedAccountID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT( Use_Case__c ) , 
+&quot;Platform&quot;,  $Setup.Default_Contract_Pricing_Account__c.Platform_Account__c ,
+&quot;SPM Bundle&quot;, $Setup.Default_Contract_Pricing_Account__c.SPM_Bundle_Account__c,
+&quot;Territory and Quota&quot;, $Setup.Default_Contract_Pricing_Account__c.Territory_and_Quota_Account__c ,
+&quot;Sales Forecasting&quot;,  $Setup.Default_Contract_Pricing_Account__c.Sales_Forecasting_Account__c  ,
+&quot;Capacity Planning&quot;,  $Setup.Default_Contract_Pricing_Account__c.Capacity_Planning_Account__c  ,
+&quot;Deal Desk&quot;,  $Setup.Default_Contract_Pricing_Account__c.Deal_Desk_Account__c  ,
+&quot;Commissions Crediting &amp; Modeling&quot;,  $Setup.Default_Contract_Pricing_Account__c.Commission_Crediting_Modeling__c,
+&quot;FP&amp;A&quot;,  $Setup.Default_Contract_Pricing_Account__c.FP_A_Account__c,
+&quot;Planning Budgeting Forecasting&quot;, $Setup.Default_Contract_Pricing_Account__c.Planning_Budgeting_Forecasting_Account__c,
+&quot;Operational Finance&quot;, $Setup.Default_Contract_Pricing_Account__c.Operational_Finance_Account__c  ,
+&quot;Financial Consolidation&quot;,  $Setup.Default_Contract_Pricing_Account__c.Financial_Consolidation_Account__c  ,
+&quot;&quot;
+)</formula>
+        <label>ContractedAccountID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Count_Capacity__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Capacity</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>contains</operation>
+            <value>Capacity Planning</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Contributor__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Contributor</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>startsWith</operation>
+            <value>Contributor (s)</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Model_Builder__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Model Builder</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>contains</operation>
+            <value>Model Builder</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Project_Management__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Project Management</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>contains</operation>
+            <value>Project Manager</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Services</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Family_Rollup__c</field>
+            <operation>equals</operation>
+            <value>Services</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Solution_Architect__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Solution Architect</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>contains</operation>
+            <value>Solution Architect</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Subscription__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Subscription</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Is_Subscription__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Training__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Training</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>contains</operation>
+            <value>Training</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Viewer__c</fullName>
+        <externalId>false</externalId>
+        <label>Count - Viewer</label>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>startsWith</operation>
+            <value>Viewer</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Invoice_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Invoice Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Price_Hold__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Price Hold</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Delayed_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Revised_Start_Date__c - 30 &gt;  SBQQ__StartDate__c , &apos;Yes&apos;, &apos;No&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Delayed Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__AdditionalDiscountAmount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Discount_from_List_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annual_List_Total__c - Annual_Net_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount from List Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Discount_from_Regular_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>Annual_Discounted_List_Total__c - Annual_Net_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount from Regular Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Displayed_Use_Case_Definition__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT ( Use_Case__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Displayed Use Case Definition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Does_Not_Have_Online_Order_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Order_Schedule__c ) = &apos;Online Order Schedule&apos;, FALSE, TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Does Not Have Online Order Schedule</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Does_Not_Have_Opt_Opt_Rights__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISBLANK(TEXT(Opt_Out_Period__c)), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Does Not Have Opt Opt Rights</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Does_Not_Have_Services__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Count_Services__c &gt; 0, false, true)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Does Not Have Services</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Early_Renewal__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( SBQQ__StartDate__c &lt; SBQQ__Opportunity__r.SBQQ__RenewedContract__r.EndDate , &apos;Yes&apos;, &apos;No&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Early Renewal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date_Long_Format__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISNULL( Calculated_End_Date_Old__c),&quot;&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=1, &quot;Jan&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=2, &quot;Feb&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=3, &quot;Mar&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=4, &quot;Apr&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=5, &quot;May&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c)=6, &quot;Jun&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c)=7, &quot;Jul&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=8, &quot;Aug&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=9, &quot;Sep&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c)=10, &quot;Oct&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=11, &quot;Nov&quot;, 
+IF(MONTH( Calculated_End_Date_Old__c )=12, &quot;Dec&quot;, &quot;MMM&quot;)))))))))))) 
+&amp; &quot; &quot; &amp; TEXT(DAY( Calculated_End_Date_Old__c )) 
+&amp; &quot;, &quot; &amp; TEXT(YEAR ( Calculated_End_Date_Old__c )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>End Date (Long Format)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Extra_Special_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Extra Special Terms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Has_Capacity__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Count_Capacity__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Capacity</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Contributor__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Count_Contributor__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Contributor</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Extra_Special_Terms__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISBLANK (Extra_Special_Terms__c), false, true)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Extra Special Terms</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Model_Builder_Services__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND ( Has_Model_Builder__c ,  Has_Services__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Model Builder Services</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Model_Builder__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Model_Builder__c  &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Model Builder</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_No_Services_Or_In_US__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Count_Services__c = 0 || SBQQ__BillingCountry__c = &apos;US&apos; || SBQQ__BillingCountry__c = &apos;USA&apos; || SBQQ__BillingCountry__c = &apos;United States&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has No Services Or In US</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Online_Order_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Order_Schedule__c ) = &apos;Online Order Schedule&apos;, TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Online Order Schedule</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Opt_Out_Rights__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISBLANK(TEXT(Opt_Out_Period__c)), FALSE, TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Opt Out Rights</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Phased_Pricing__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Max_Segment_Index__c &gt; 0, TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Phased Pricing</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Project_Management__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Project_Management__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Project Management</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Services_And_Not_In_US__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Services__c &gt; 0 &amp;&amp; (SBQQ__BillingCountry__c &lt;&gt; &apos;US&apos; &amp;&amp; SBQQ__BillingCountry__c &lt;&gt; &apos;USA&apos; &amp;&amp; SBQQ__BillingCountry__c &lt;&gt; &apos;United States&apos;), true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Services And Not In US</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Services__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Services__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Services</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Solution_Architect__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Solution_Architect__c  &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Solution Architect</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Standard_Pricing__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Max_Segment_Index__c &gt; 1, FALSE, TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Standard Pricing</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Subscription__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Subscription__c  &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Subscription</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Training__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Count_Training__c  &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Training</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Viewer__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Count_Viewer__c &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Viewer</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Has_Workspace__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Workspace_Qty__c  &gt; 0, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Has Workspace</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IP_Changes_to_Anaplan_NDA__c</fullName>
+        <externalId>false</externalId>
+        <label>IP Changes to Anaplan NDA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Include_Additional_Capacity_and_Users_OL__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Include Additional Capacity / User (OLD)</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Additional_Capacity_and_Users__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISBLANK(Custom_Price_Hold__c ), FALSE, TRUE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include Additional Capacity and Users</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Limited_Contributor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Include Limited Contributor</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Opt_Out_Right__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>No Longer Used</description>
+        <externalId>false</externalId>
+        <label>Include Opt-Out Right</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Temporary_Workspace_Capacity_Inc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Include Temporary Workspace Capacity Inc</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Use_Case_Restriction__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Use_Case__c ) = &apos;Platform&apos;, false, true)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Include Use Case Restriction</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Indemnification_changes__c</fullName>
+        <externalId>false</externalId>
+        <label>Indemnification changes</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Item 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Item 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Is_Fixed_Fee__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT(PS_Type__c) = &apos;Fixed&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Fixed Fee</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Option_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  TEXT(Print_Layout__c) = &apos;Show List Price&apos; &amp;&amp; Has_Subscription__c, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Option 1</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Option_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  TEXT(Print_Layout__c) = &apos;Show Discounted List Price&apos; &amp;&amp; Has_Subscription__c, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Option 2</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Option_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT(Print_Layout__c) = &apos;Show Net Price without Discount&apos; &amp;&amp; Has_Subscription__c, true, false)</formula>
+        <label>Is Option 3</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_T_M__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT(PS_Type__c) = &apos;T&amp;M&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is T&amp;M</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Year_ACV__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (X3rd_Yr_ACV__c &lt;&gt; 0, X3rd_Yr_ACV__c, IF (X2nd_Yr_ACV__c &lt;&gt; 0, X2nd_Yr_ACV__c, 0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Year ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Location_Not_California__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal Location Not California</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Liability_Limit__c</fullName>
+        <externalId>false</externalId>
+        <label>Liability Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Link_To_Order_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Link To Order Schedule</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MD_Approver_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Sales_Rep_Role__c, 
+&quot;AE - East&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;Alliance East&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;AE - South East&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;AE - Central&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;Regional Manager - Central&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;Alliance Central&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;AE - West&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;Alliance West&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;AE - Bay Area West&quot;, &quot;005A0000004Hhv9&quot; /* Dennis Dresser */, 
+&quot;AE - Australia / NZL&quot;, &quot;005A0000003Xr9W&quot; /* Samir Neji */, 
+&quot;AE - India, South Korea&quot;, &quot;005A0000003Xr9W&quot; /* Samir Neji */, 
+&quot;AE - Malaysia / Thailand&quot;, &quot;005A0000003Xr9W&quot; /* Samir Neji */, 
+&quot;Alliance - Malaysia / Thailand&quot;, &quot;005A0000003Xr9W&quot; /* Samir Neji */, 
+&quot;AE - Singapore, Philippines, Hongkong&quot;, &quot;005A0000003Xr9W&quot; /* Samir Neji */, 
+&quot;Country Manager Singapore, Philippines, Hongkong&quot;, &quot;005A0000003Xr9W&quot; /*Samir Neji*/, 
+&quot;AE - Benelux&quot;, &quot;005A0000003ryBi&quot; /* Laurent Lefouet */, 
+&quot;Benelux Country Manager&quot;, &quot;005A0000003XptD&quot; /* Laurent Lefouet */, 
+&quot;AE - Eastern Europe&quot;, &quot;005A0000003XptD&quot; /* Laurent Lefouet */, 
+&quot;AE - France&quot;, &quot;005A0000003XptD&quot; /* Laurent Lefouet */, 
+&quot;AE - Nordics&quot;, &quot;005A0000003XptD&quot; /* Laurent Lefouet */, 
+&quot;AE - UK&quot;, &quot;005A0000003XptD&quot; /* Laurent Lefouet */, 
+&quot;AE - UK&quot;, &quot;005A0000003XptD&quot; /* Laurent Lefouet */, 
+&quot;005A0000004Hhv9&quot; /* Dennis Dresser */)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MD Approver ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MD_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>MD Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Publicity_Description__c</fullName>
+        <defaultValue>&quot;Name &amp; Logo: Anaplan may use Client&apos;s name and logo on Anaplan&apos;s website and marketing collateral subject to compliance with branding guidelines provided by Client.&quot;
++ BR() + BR() +
+&quot;Press Release: Upon completion of implementation services, Anaplan may issue one press release, distribution costs paid by Anaplan, to announce Client&apos;s selection and implementation of Anaplan and the Anaplan Service.  No financial or contract details will be included.&quot;
++ BR() + BR() +
+&quot;Case Study: Client will work with Anaplan to create a case study describing how Anaplan has benefited its operations.  Anaplan will pay all costs associated with creation and distribution of the case study.  Distribution of the case study and an accompanying press release is subject to Clients prior approval.&quot;
++ BR() + BR() +
+&quot;Reference Calls: Subject to Clients availability, Client will participate in reference calls as reasonably requested by Anaplan in advance.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Marketing &amp; Publicity Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Material_changes_to_scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Material changes to scope</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Max_Segment_Index__c</fullName>
+        <externalId>false</externalId>
+        <label>Max - Segment Index</label>
+        <summarizedField>SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c</summarizedField>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Net_Amount_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Amount - ACV</label>
+        <summarizedField>SBQQ__QuoteLine__c.SBQQ__NetPrice__c</summarizedField>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Net_Subscription_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Subscription Amount</label>
+        <summarizedField>SBQQ__QuoteLine__c.Annual_Net_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Is_Subscription__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__StartDate__c + 
+ CASE( TEXT(Opt_Out_Period__c), 
+ &quot;90 Days&quot;, 90, 
+ &quot;6 Months&quot;, 180,
+ &quot;1 Year&quot;, 365,
+ 0) - Opt_Out_Notice__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opt Out Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Hosting_Support_Fees__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Opt Out - Hosting / Support Fees</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Notice__c</fullName>
+        <defaultValue>30</defaultValue>
+        <externalId>false</externalId>
+        <label>Opt Out Notice</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Opt Out Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>90 Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opt_Out_Termination_Date__c</fullName>
+        <description>Opt Out Termination Date - Used on the quote template</description>
+        <externalId>false</externalId>
+        <label>Opt Out Termination Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_Schedule_Expand__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Order_Schedule__c ) = &apos;Expand Previous Order Schedule&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Schedule - Expand</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Order_Schedule_New__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Order_Schedule__c ) = &apos;Negotiated SSA or Renewal&apos; || TEXT( Order_Schedule__c ) = &apos;&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Schedule - Negotiated SSA or Renew</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Order_Schedule_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>UPPER(LEFT(SBQQ__BillingName__c,3)) + 
+TEXT(Year(Today())) + 
+IF (Day(Today()) &lt; 10, &apos;0&apos;, &apos;&apos;) + TEXT(Day(Today())) + 
+IF (Month(Today()) &lt; 10, &apos;0&apos;, &apos;&apos;) + TEXT(Month(Today()))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Schedule Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Schedule_Online__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Order_Schedule__c ) = &apos;Online Order Schedule&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Schedule - Online</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Order_Schedule_Replace__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (TEXT( Order_Schedule__c ) = &apos;Replace Previous Order Schedule&apos;, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order Schedule - Replace</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Order_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Schedule</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Negotiated SSA or Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expand Previous Order Schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Online Order Schedule</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PS_Billing_Terms_Custom__c</fullName>
+        <externalId>false</externalId>
+        <label>PS Billing Terms - Custom</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PS_Billing_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>PS Billing Terms</label>
+        <picklist>
+            <picklistValues>
+                <fullName>50/50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upfront</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PS_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>PS Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>T&amp;M</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Term_Custom__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Term - Custom</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( TEXT( SBQQ__PaymentTerms__c ) &lt;&gt; &apos;Custom&apos;, 
+TEXT(SBQQ__PaymentTerms__c), Payment_Term_Custom__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Terms Display</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Net_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__Opportunity__r.SBQQ__RenewedContract__r.SBQQ__Quote__r.SBQQ__NetAmount__c</formula>
+        <label>Previous Net Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Price_Cap_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISPICKVAL(Price_Cap__c, &apos;Custom&apos;), TEXT(Price_Cap_Other__c), TEXT(Price_Cap__c) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price Cap Display</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_Cap_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Cap (Other)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Price_Cap__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Cap (%)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price_Hold__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Hold</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&lt;40%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt;40%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_TypeProductLookupFilterValue__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Standard&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Pricing_TypeProductLookupFilterValue</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Print_Layout__c</fullName>
+        <externalId>false</externalId>
+        <label>Print Layout</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Show List Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Show Discounted List Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Show Net Price without Discount</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prior_Order_Schedule_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Prior Order Schedule Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Prior_Order_Schedule_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Prior Order Schedule Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Billing_Terms_Custom__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Billing Terms - Custom</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Billing_Terms_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT(Product_Billing_Terms__c), 
+&quot;Annual&quot;, &quot;Annual in Advance&quot;, 
+&quot;Quarterly&quot;, &quot;Quarterly in Advance&quot;, 
+ Product_Billing_Terms_Custom__c  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Billing Terms Display</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Billing_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Billing Terms</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Annual</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Lines_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Lines Count</label>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Output_Use_Case_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Output - Use Case Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RVP_Approver_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Sales_Rep_Role__c, 
+&quot;AE - East&quot;, &quot;005A0000003adkt&quot; /* Dan Hurley */, 
+&quot;Alliance East&quot;, &quot;005A0000004Juxm&quot; /* Jereome Feltracco */, 
+&quot;AE – South East&quot;, &quot;005120000060Y2N&quot; /* Christine Burke */,
+&quot;AE - Central&quot;, &quot;005A0000004ljdV&quot; /* Trent Myer */,
+&quot;Regional Manager - Central&quot;, &quot;005A0000004ljdV&quot; /* Trent Myer */,
+&quot;Alliance Central&quot;, &quot;005A0000004Juxm&quot; /* Jereome Feltracco*/,
+&quot;AE - West&quot;, &quot;00512000005tDsQ&quot; /* Garrett Abel */,
+&quot;Alliance West&quot;, &quot;005A0000004Juxm&quot; /* Jereome Feltracco */,
+&quot;AE - Bay Area West&quot;, &quot;005120000067SkQ&quot; /* Michael Douroux */,
+&quot;AE - Australia / NZL&quot;, &quot;005A0000004kvGR&quot; /* David Padgett */,
+&quot;AE - India, South Korea&quot;, &quot;0051200000607PU&quot; /* Atul Patel */,
+&quot;AE - Malaysia / Thailand&quot;, &quot;005A0000004kUvO&quot; /* Ganapathy Sirgunavel */,
+&quot;Alliance - Malaysia / Thailand&quot;, &quot;0051200000607PU&quot; /* Atul Patel */,
+&quot;AE - Singapore, Philippines, Hongkong&quot;, &quot;005A0000004kUvO&quot; /* Ganapathy Sirgunavel */,
+&quot;Country Manager Singapore, Philippines, Hongkong&quot;, &quot;005A0000004kUvO&quot; /*Ganapathy Sirgunavel*/,
+&quot;AE - Benelux&quot;, &quot;005A0000003ryBi&quot; /* Marco Van Oosterhout */,
+&quot;Benelux Country Manager&quot;, &quot;005A0000003ryBi&quot; /* Marco Van Oosterhout */,
+&quot;AE - Eastern Europe&quot;, &quot;005A0000004kswk&quot; /* Yuri Rotmanov */,
+&quot;AE - France&quot;, &quot;005A0000004KnED&quot; /* Nicolas Forcade */,
+&quot;AE - Nordics&quot;, &quot;005A0000003XptS&quot; /* Thomas Anderberg */,
+&quot;AE - UK&quot;, &quot;005A0000003Z24u&quot; /* Ian Stone */,
+&quot;GM EMEA&quot;, &quot;005A0000002mJ4v&quot; /* Edward Hickling */,
+&quot;00512000005tDsQ&quot; /* Garrett Abel */)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RVP Approver ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RVP_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>RVP Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Increase__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Previous_Net_Amount__c ) , 0 , 
+1 - ( Previous_Net_Amount__c / SBQQ__NetAmount__c )
+)</formula>
+        <label>Renewal Increase</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Revised_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Revised Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Customer account. Defaulted on create from the opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer account for this quote. Defaults to the account for the opportunity when creating a quote.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AdditionalDiscountAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amount of additional discount on this quote.</description>
+        <externalId>false</externalId>
+        <formula>SBQQ__RegularAmount__c - SBQQ__CustomerAmount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount additionally discounted on this quote manually.</inlineHelpText>
+        <label>Addl. Disc. Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AverageCustomerDiscount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Average customer discount (in percent) for this quote.</description>
+        <externalId>false</externalId>
+        <formula>IF(SBQQ__ListAmount__c = 0, 0, ((SBQQ__ListAmount__c - SBQQ__CustomerAmount__c) / SBQQ__ListAmount__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Average customer discount (in percent) for this quote.</inlineHelpText>
+        <label>Avg. Customer Disc. (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__AveragePartnerDiscount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Average partner discount (in percent) for this quote.</description>
+        <externalId>false</externalId>
+        <formula>IF(SBQQ__CustomerAmount__c = 0, 0, (SBQQ__CustomerAmount__c -  SBQQ__NetAmount__c) / SBQQ__CustomerAmount__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Average partner discount (in percent) for this quote.</inlineHelpText>
+        <label>Avg. Partner Disc. (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>City of the Bill To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>City of the Bill To address for this quote.</inlineHelpText>
+        <label>Bill To City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Country of the Bill To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country of the Bill To address for this quote.</inlineHelpText>
+        <label>Bill To Country</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name for the Bil To address.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name for the Bil To address.</inlineHelpText>
+        <label>Bill To Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Postal Code of the Bill To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Postal Code of the Bill To address for this quote.</inlineHelpText>
+        <label>Bill To Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingState__c</fullName>
+        <deprecated>false</deprecated>
+        <description>State/Province of the Bill To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State/Province of the Bill To address for this quote.</inlineHelpText>
+        <label>Bill To State</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__BillingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Street portion of the billing address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Street portion of the billing address for this quote.</inlineHelpText>
+        <label>Bill To Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__CustomerAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Customer Amount</label>
+        <summarizedField>SBQQ__QuoteLine__c.SBQQ__CustomerTotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__Optional__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__CustomerDiscount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Additional discount extended to customer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional discount extended to the customer on this quote. You&apos;ll be able to override this value at individual line item level. Any line items that don&apos;t have additional discount explicitly specified will default to this value.</inlineHelpText>
+        <label>Additional  Disc. (%)</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DaysQuoteOpen__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of days the quote has been opened.</description>
+        <externalId>false</externalId>
+        <formula>if(OR(ISPICKVAL( SBQQ__Status__c ,&quot;Draft&quot; ),ISPICKVAL( SBQQ__Status__c ,&quot;In Review&quot;),ISPICKVAL( SBQQ__Status__c , &quot;Approved&quot;), ISPICKVAL( SBQQ__Status__c , &quot;Presented&quot;)),Round(NOW() - CreatedDate,0) ,null)</formula>
+        <inlineHelpText>Number of days the quote has been opened.</inlineHelpText>
+        <label>Days Quote Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DefaultTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Template that should be used with this quote. SteelBrick CPQ will use this value to default template selection on &quot;Generate Document&quot; screen.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Template that should be used with this quote. SteelBrick CPQ automatically selects the template specified here when you click &quot;Generate Document&quot;</inlineHelpText>
+        <label>Default Template</label>
+        <referenceTo>SBQQ__QuoteTemplate__c</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DeliveryMethod__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Method used to deliver products on this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Method used to deliver products on this quote.</inlineHelpText>
+        <label>Delivery Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Download</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DistributorDiscount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Distributor discount that applies to this quote unless overridden on line item level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Distributor discount that applies to this quote unless overridden on line item level.</inlineHelpText>
+        <label>Distributor Discount</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Distributor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Distributor for this quote. Defaulted from partner on opportunity with role of &quot;Distributor&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Distributor for this quote. Defaulted from partner on opportunity with role of &quot;Distributor&quot;.</inlineHelpText>
+        <label>Distributor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Distributor Quotes</relationshipLabel>
+        <relationshipName>DistributorQuotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__DocumentStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Document Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__EmailTemplateId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of email template that will be pre-populated when documents generated from this quote are emailed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you have a specific email template to use for documents generated and emailed from this quote, enter the email template ID here.</inlineHelpText>
+        <label>Email Template Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__EndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>End date for subscriptions in this group.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End date for subscriptions in this group.</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ExpirationDate__c</fullName>
+        <defaultValue>IF(NOT(ISBLANK($Setup.SBQQ__GeneralSettings__c.SBQQ__DefaultQuoteValidity__c)),TODAY() + $Setup.SBQQ__GeneralSettings__c.SBQQ__DefaultQuoteValidity__c, null)</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Date after which the Quote is no longer valid</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date after which the Quote is no longer valid</inlineHelpText>
+        <label>Expires On</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__FirstSegmentTermEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used with multi-segment Products to prorate first segment.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used with multi-segment Products to prorate first segment.</inlineHelpText>
+        <label>First Segment Term End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Introduction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Introduction that can be printed on the generated PDF document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Introduction that can be printed on the generated PDF document.</inlineHelpText>
+        <label>Introduction</label>
+        <length>2000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Unique key used in identifying &quot;shopping cart&quot; quotes without relying on internal IDs.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Internal unique key used for identifying &quot;shopping cart&quot; quotes without relying on internal IDs</inlineHelpText>
+        <label>Key</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__LineItemCount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of line items in this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of line items in this quote.</inlineHelpText>
+        <label>Line Item Count</label>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__LineItemsGrouped__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Option that allows you to use SolutionGroups(TM) or ad hoc groups to categorize and subtotal quote line items.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this option to use SolutionGroups(TM) or add your own groups on the Edit Lines page to categorize and subtotal quote line items.</inlineHelpText>
+        <label>Group Line Items</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__LineItemsPrinted__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Option which when checked prints individual line items on the PDF document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select to print individual line items on the generated PDF quote document.</inlineHelpText>
+        <label>Print Line Items</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ListAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total List Amount of each non-optional line item in this quote.</inlineHelpText>
+        <label>List Amount</label>
+        <summarizedField>SBQQ__QuoteLine__c.SBQQ__ListTotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__Optional__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__MarkupRate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default markup rate applied to line items on this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default markup rate applied to line items on this quote. You&apos;ll be able to override this value on group and line item level.</inlineHelpText>
+        <label>Markup (%)</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__MasterContract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Master contract with which subscription products in this quote are to be co-terminated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Master contract with which subscription products in this quote are to be co-terminated.</inlineHelpText>
+        <label>Master Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Co-Terminated Quotes</relationshipLabel>
+        <relationshipName>CoTerminatedQuotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__NetAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Net Amount of each non-optional line item in this quote.</inlineHelpText>
+        <label>Net Amount</label>
+        <summarizedField>SBQQ__QuoteLine__c.SBQQ__NetTotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__Optional__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Notes printed on the generated PDF document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Notes printed on the generated PDF document.</inlineHelpText>
+        <label>Notes</label>
+        <length>2000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Opportunity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Opportunity being quoted.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity being quoted.</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>SBQQ__OriginalQuote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>If the quote is a Change Order this field points to the original quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this Quote record represents a change order, use this field to link back to the original quote.</inlineHelpText>
+        <label>Original Quote</label>
+        <referenceTo>SBQQ__Quote__c</referenceTo>
+        <relationshipLabel>Change Orders</relationshipLabel>
+        <relationshipName>ChangeOrders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PartnerDiscount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Discount extended to the partner on this opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Discount extended to the partner on this opportunity.</inlineHelpText>
+        <label>Partner Discount</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Partner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Primary partner on this deal (if any). Defaulted to partner marked as primary in Partners related list on the opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary partner on this deal (if any). This field defaults to the partner marked as primary in the Partners related list on the opportunity.</inlineHelpText>
+        <label>Partner</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Partner Quotes</relationshipLabel>
+        <relationshipName>PartnerQuotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PaymentTerms__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Terms that govern payment of the items in this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Terms that govern payment of the items in this quote.</inlineHelpText>
+        <label>Payment Terms</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Due on receipt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Net 15</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Net 30</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Net 90</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PriceBook__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Price Book</label>
+        <referenceTo>Pricebook2</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PricebookId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the pricebook used by this quote.</description>
+        <externalId>false</externalId>
+        <label>Pricebook ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__PrimaryContact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Primary contact for the quote. This person&apos;s name will appear on generated quote document.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary contact for the quote. This person&apos;s name will appear on generated quote document.</inlineHelpText>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checkbox which if checked designates the quote as the Primary Quote</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this checkbox to designate this quote as the primary one on the opportunity and sync quote line items with opportunity line items.</inlineHelpText>
+        <label>Primary</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuoteProcessId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of the quote process to use with this quote. This field is meant to be populated by a workflow rule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Guided selling process ID to use with this quote, if any.</inlineHelpText>
+        <label>Quote Process Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuoteTemplateId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>ID of quote template that must be used when generating documents from this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores a quote template ID if one is specified to use when generating quote PDF documents.</inlineHelpText>
+        <label>Quote Template Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__RegularAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Roll up of regular amounts of quote products.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total amount of non-optional line times before additional discounts are applied.</inlineHelpText>
+        <label>Regular Amount</label>
+        <summarizedField>SBQQ__QuoteLine__c.SBQQ__RegularTotal__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__Optional__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SalesRep__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Sales rep responsible for this quote if different from the user who owns the Quote record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales rep responsible for this quote if different from the user who owns the Quote record.</inlineHelpText>
+        <label>Sales Rep</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingCity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>City on the Ship To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>City on the Ship To address for this quote.</inlineHelpText>
+        <label>Ship To City</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingCountry__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Country on the Ship To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country on the Ship To address for this quote.</inlineHelpText>
+        <label>Ship To Country</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name on the Ship To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name on the Ship To address for this quote.</inlineHelpText>
+        <label>Ship To Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingPostalCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Postal Code on the Ship To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Postal Code on the Ship To address for this quote.</inlineHelpText>
+        <label>Ship To Postal Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingState__c</fullName>
+        <deprecated>false</deprecated>
+        <description>State/Province on the Ship To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State/Province on the Ship To address for this quote.</inlineHelpText>
+        <label>Ship To State</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ShippingStreet__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Street on the Ship To address for this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Street on the Ship To address for this quote.</inlineHelpText>
+        <label>Ship To Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Source__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Source of cloned quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If cloned, this references the original quote cloned.</inlineHelpText>
+        <label>Source</label>
+        <referenceTo>SBQQ__Quote__c</referenceTo>
+        <relationshipLabel>Quotes (Source)</relationshipLabel>
+        <relationshipName>Clones</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__StartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Start date for subscriptions in this quote.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start date for subscriptions in this quote.</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Status indicating where quote is in its lifecycle.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status indicating where quote is in its lifecycle.</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Subscription term used to prorate eligible products by day or month.  This has been set by your administrator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Subscription term used to prorate eligible products by day or month.  This has been set by your administrator.</inlineHelpText>
+        <label>Subscription Term</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TargetCustomerAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Customer amount to be targeted in calculating additional discounts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter desired customer amount to automatically calculate additional discount on discountable line items.</inlineHelpText>
+        <label>Target Customer Amount</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__TotalCustomerDiscountAmount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total amount of customer discount. This includes any contracted, volume, compound rate and additional discounts.</description>
+        <externalId>false</externalId>
+        <formula>SBQQ__ListAmount__c - SBQQ__CustomerAmount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total amount of customer discount. This includes any contracted, volume, compound rate and additional discounts.</inlineHelpText>
+        <label>Total Customer Disc. Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of quote</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of quote</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Quote</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__WatermarkShown__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>To display watermark in the Quote Document if it&apos;s checked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To display watermark in the Quote Document if it&apos;s checked.</inlineHelpText>
+        <label>Watermark Shown</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Rep_Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>SBQQ__SalesRep__r.UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Rep Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_Description__c</fullName>
+        <defaultValue>&quot;Add 1 - 3 sentences describing services at a high level. ex: Model building support for FP&amp;A, project scoping workshop, etc.&quot;</defaultValue>
+        <description>Custom Field Used for Sales Rep to enter services description which will be displayed on the quote output</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Services Description used in quote output</inlineHelpText>
+        <label>Services Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Services_End_Date_Long_Format__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISNULL( Services_End_Date__c),&quot;&quot;, 
+IF(MONTH( Services_End_Date__c )=1, &quot;Jan&quot;, 
+IF(MONTH( Services_End_Date__c )=2, &quot;Feb&quot;, 
+IF(MONTH( Services_End_Date__c )=3, &quot;Mar&quot;, 
+IF(MONTH( Services_End_Date__c )=4, &quot;Apr&quot;, 
+IF(MONTH( Services_End_Date__c )=5, &quot;May&quot;, 
+IF(MONTH( Services_End_Date__c)=6, &quot;Jun&quot;, 
+IF(MONTH( Services_End_Date__c)=7, &quot;Jul&quot;, 
+IF(MONTH( Services_End_Date__c )=8, &quot;Aug&quot;, 
+IF(MONTH( Services_End_Date__c )=9, &quot;Sep&quot;, 
+IF(MONTH( Services_End_Date__c)=10, &quot;Oct&quot;, 
+IF(MONTH( Services_End_Date__c )=11, &quot;Nov&quot;, 
+IF(MONTH(Services_End_Date__c )=12, &quot;Dec&quot;, &quot;MMM&quot;)))))))))))) 
+&amp; &quot; &quot; &amp; TEXT(DAY( Services_End_Date__c )) 
+&amp; &quot;, &quot; &amp; TEXT(YEAR ( Services_End_Date__c )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Services End Date (Long Format)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Services End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Services_Start_Date_Long_Format__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISNULL( Services_Start_Date__c),&quot;&quot;, 
+IF(MONTH( Services_Start_Date__c )=1, &quot;Jan&quot;, 
+IF(MONTH( Services_Start_Date__c )=2, &quot;Feb&quot;, 
+IF(MONTH( Services_Start_Date__c )=3, &quot;Mar&quot;, 
+IF(MONTH( Services_Start_Date__c )=4, &quot;Apr&quot;, 
+IF(MONTH( Services_Start_Date__c )=5, &quot;May&quot;, 
+IF(MONTH( Services_Start_Date__c)=6, &quot;Jun&quot;, 
+IF(MONTH( Services_Start_Date__c)=7, &quot;Jul&quot;, 
+IF(MONTH( Services_Start_Date__c )=8, &quot;Aug&quot;, 
+IF(MONTH( Services_Start_Date__c )=9, &quot;Sep&quot;, 
+IF(MONTH( Services_Start_Date__c)=10, &quot;Oct&quot;, 
+IF(MONTH( Services_Start_Date__c )=11, &quot;Nov&quot;, 
+IF(MONTH(Services_Start_Date__c )=12, &quot;Dec&quot;, &quot;MMM&quot;)))))))))))) 
+&amp; &quot; &quot; &amp; TEXT(DAY( Services_Start_Date__c )) 
+&amp; &quot;, &quot; &amp; TEXT(YEAR ( Services_Start_Date__c )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Services Start Date (Long Format)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Services Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date_Long_Format__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISNULL( SBQQ__StartDate__c),&quot;&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=1, &quot;Jan&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=2, &quot;Feb&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=3, &quot;Mar&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=4, &quot;Apr&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=5, &quot;May&quot;, 
+IF(MONTH( SBQQ__StartDate__c)=6, &quot;Jun&quot;, 
+IF(MONTH( SBQQ__StartDate__c)=7, &quot;Jul&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=8, &quot;Aug&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=9, &quot;Sep&quot;, 
+IF(MONTH( SBQQ__StartDate__c)=10, &quot;Oct&quot;, 
+IF(MONTH( SBQQ__StartDate__c )=11, &quot;Nov&quot;, 
+IF(MONTH(SBQQ__StartDate__c )=12, &quot;Dec&quot;, &quot;MMM&quot;)))))))))))) 
+&amp; &quot; &quot; &amp; TEXT(DAY( SBQQ__StartDate__c )) 
+&amp; &quot;, &quot; &amp; TEXT(YEAR ( SBQQ__StartDate__c )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Start Date (Long Format)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Terms_Display__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  MOD( SBQQ__SubscriptionTerm__c , 12) = 0, 
+IF ( SBQQ__SubscriptionTerm__c &lt; 24,  &apos; 1 Year&apos;, TEXT(SBQQ__SubscriptionTerm__c /12 ) + &apos; Year(s)&apos;),
+TEXT(SBQQ__SubscriptionTerm__c) + &apos; Months&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Terms Display</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Todays_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Today()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Todays Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Subscription_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Net_Subscription_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Subscription Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Subscription_Fee__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  ISBLANK(TEXT(Opt_Out_Period__c)),  SBQQ__NetAmount__c , SBQQ__NetAmount__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Subscription Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Subscription_Invoice_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( TEXT( Product_Billing_Terms__c ), 
+&quot;Annual&quot;, 1 * 
+IF ( X1st_Yr_ACV__c &gt; 0 , X1st_Year_Subscription__c, 
+X1st_Year_Subscription_Standard__c ) , 
+&quot;Quarterly&quot;, 0.25 * 
+IF ( X1st_Yr_ACV__c &gt; 0 , X1st_Year_Subscription__c, 
+X1st_Year_Subscription_Standard__c ) ,
+&quot;Custom&quot;,  Custom_Invoice_Amount__c ,
+IF ( X1st_Yr_ACV__c &gt; 0 , X1st_Year_Subscription__c, 
+X1st_Year_Subscription_Standard__c ))</formula>
+        <label>Total Subscription Invoice Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Use_Case_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If platform = n/a, the use case description is required.</inlineHelpText>
+        <label>Use Case Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Use_Case__c</fullName>
+        <externalId>false</externalId>
+        <label>Use Case</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Platform</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SPM Bundle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Territory and Quota</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Forecasting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Capacity Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deal Desk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commissions Crediting &amp; Modeling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FP&amp;A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Planning Budgeting Forecasting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Operational Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial Consolidation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Workspace_Qty__c</fullName>
+        <externalId>false</externalId>
+        <label>Workspace Qty (GB)</label>
+        <summarizedField>SBQQ__QuoteLine__c.Additional_Capacity_GB__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Product_Name_Rollup__c</field>
+            <operation>contains</operation>
+            <value>Workspace</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>X1st_Year_Subscription_Standard__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (  Has_Standard_Pricing__c , Total_Subscription_Amount__c / (   Calculated_Subscription_Term__c / 12  ), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>1st Year Subscription - Standard</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>X1st_Year_Subscription__c</fullName>
+        <externalId>false</externalId>
+        <label>1st Year Subscription - Phased</label>
+        <summarizedField>SBQQ__QuoteLine__c.Net_Subscription_Total__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.Is_Subscription__c</field>
+            <operation>equals</operation>
+            <value>Yes</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>X1st_Yr_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>1st Yr ACV</label>
+        <summarizedField>SBQQ__QuoteLine__c.Net_Unit_Price_ACV_Rollup__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>X1st_yr_ACV_50_Last_Yr_ACV__c</fullName>
+        <externalId>false</externalId>
+        <formula>/*IF ( X1st_Yr_ACV__c &lt; 0.50 *  Last_Year_ACV__c, &apos;Yes&apos;, &apos;No&apos;)*/
+
+IF ( X1st_Yr_ACV__c &lt;&gt; 0, ((Last_Year_ACV__c - X1st_Yr_ACV__c) /  X1st_Yr_ACV__c), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>1st yr ACV &lt; 40% Last Yr ACV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X2nd_Yr_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>2nd Yr ACV</label>
+        <summarizedField>SBQQ__QuoteLine__c.Net_Unit_Price_ACV_Rollup__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c</field>
+            <operation>equals</operation>
+            <value>2</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>X3rd_Yr_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>3rd Yr ACV</label>
+        <summarizedField>SBQQ__QuoteLine__c.Net_Unit_Price_ACV_Rollup__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c</field>
+            <operation>equals</operation>
+            <value>3</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>X4th_Yr_ACV__c</fullName>
+        <externalId>false</externalId>
+        <label>4th Yr ACV</label>
+        <summarizedField>SBQQ__QuoteLine__c.Net_Unit_Price_ACV_Rollup__c</summarizedField>
+        <summaryFilterItems>
+            <field>SBQQ__QuoteLine__c.SBQQ__SegmentIndex__c</field>
+            <operation>equals</operation>
+            <value>4</value>
+        </summaryFilterItems>
+        <summaryForeignKey>SBQQ__QuoteLine__c.SBQQ__Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <label>Quote</label>
+    <listViews>
+        <fullName>SBQQ__All</fullName>
+        <columns>NAME</columns>
+        <columns>SBQQ__Opportunity__c</columns>
+        <columns>SBQQ__Type__c</columns>
+        <columns>SBQQ__Primary__c</columns>
+        <columns>SBQQ__NetAmount__c</columns>
+        <columns>SBQQ__Status__c</columns>
+        <columns>SBQQ__ExpirationDate__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>SBQQ__Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Q-{00000}</displayFormat>
+        <label>Quote Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Quotes</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Approved_Quote</fullName>
+        <active>true</active>
+        <description>Approved Quote Layout</description>
+        <label>Approved Quote</label>
+        <picklistValues>
+            <picklist>ApprovalStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Indemnification_changes__c</picklist>
+            <values>
+                <fullName>Item 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Item 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opt_Out_Period__c</picklist>
+            <values>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Days</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Schedule__c</picklist>
+            <values>
+                <fullName>Expand Previous Order Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotiated SSA or Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Order Schedule</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_Billing_Terms__c</picklist>
+            <values>
+                <fullName>50%2F50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upfront</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T%26M</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Price_Cap__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Price_Hold__c</picklist>
+            <values>
+                <fullName>%3C40%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%3E40%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Print_Layout__c</picklist>
+            <values>
+                <fullName>Show Discounted List Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Show List Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Show Net Price without Discount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Billing_Terms__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__DeliveryMethod__c</picklist>
+            <values>
+                <fullName>Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__DocumentStatus__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__PaymentTerms__c</picklist>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due on receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 30</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__Type__c</picklist>
+            <values>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Use_Case__c</picklist>
+            <values>
+                <fullName>Capacity Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commissions Crediting %26 Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deal Desk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FP%26A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Consolidation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning Budgeting Forecasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPM Bundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Forecasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Territory and Quota</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Locked_Quote</fullName>
+        <active>true</active>
+        <label>Locked Quote</label>
+        <picklistValues>
+            <picklist>ApprovalStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Indemnification_changes__c</picklist>
+            <values>
+                <fullName>Item 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Item 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opt_Out_Period__c</picklist>
+            <values>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Days</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Schedule__c</picklist>
+            <values>
+                <fullName>Expand Previous Order Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotiated SSA or Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Order Schedule</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_Billing_Terms__c</picklist>
+            <values>
+                <fullName>50%2F50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upfront</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T%26M</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Price_Cap__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Price_Hold__c</picklist>
+            <values>
+                <fullName>%3C40%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%3E40%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Print_Layout__c</picklist>
+            <values>
+                <fullName>Show Discounted List Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Show List Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Show Net Price without Discount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Billing_Terms__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__DeliveryMethod__c</picklist>
+            <values>
+                <fullName>Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__DocumentStatus__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__PaymentTerms__c</picklist>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due on receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 30</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__Type__c</picklist>
+            <values>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Use_Case__c</picklist>
+            <values>
+                <fullName>Capacity Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commissions Crediting %26 Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deal Desk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FP%26A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Consolidation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning Budgeting Forecasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPM Bundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Forecasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Territory and Quota</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Unlocked_Quote</fullName>
+        <active>true</active>
+        <label>Pre-Approved Quote</label>
+        <picklistValues>
+            <picklist>ApprovalStatus__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recalled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Indemnification_changes__c</picklist>
+            <values>
+                <fullName>Item 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Item 2</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opt_Out_Period__c</picklist>
+            <values>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90 Days</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Schedule__c</picklist>
+            <values>
+                <fullName>Expand Previous Order Schedule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negotiated SSA or Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Online Order Schedule</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_Billing_Terms__c</picklist>
+            <values>
+                <fullName>50%2F50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upfront</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PS_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T%26M</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Price_Cap__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Price_Hold__c</picklist>
+            <values>
+                <fullName>%3C40%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%3E40%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Print_Layout__c</picklist>
+            <values>
+                <fullName>Show Discounted List Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Show List Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Show Net Price without Discount</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Billing_Terms__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__DeliveryMethod__c</picklist>
+            <values>
+                <fullName>Download</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__DocumentStatus__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__PaymentTerms__c</picklist>
+            <values>
+                <fullName>Custom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Due on receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 30</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denied</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presented</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SBQQ__Type__c</picklist>
+            <values>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Use_Case__c</picklist>
+            <values>
+                <fullName>Capacity Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commissions Crediting %26 Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deal Desk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FP%26A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Consolidation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning Budgeting Forecasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPM Bundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Forecasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Territory and Quota</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>SBQQ__NetAmount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SBQQ__Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SBQQ__Primary__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__Primary__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__NetAmount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__CustomerDiscount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SBQQ__PartnerDiscount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__NetAmount__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SBQQ__Primary__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>SBQQ__NetAmount__c</searchFilterFields>
+        <searchFilterFields>SBQQ__SalesRep__c</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER</searchFilterFields>
+        <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
+        <searchFilterFields>SBQQ__Primary__c</searchFilterFields>
+        <searchResultsAdditionalFields>SBQQ__Primary__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SBQQ__NetAmount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SBQQ__Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SBQQ__CustomerDiscount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SBQQ__PartnerDiscount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Business_Justification_Required</fullName>
+        <active>true</active>
+        <description>Business Justification is require for approval</description>
+        <errorConditionFormula>IF (TEXT(  ApprovalStatus__c  ) = &apos;Pending&apos; &amp;&amp;
+    ISBLANK ( Business_Justification__c  ), true, false)</errorConditionFormula>
+        <errorDisplayField>Business_Justification__c</errorDisplayField>
+        <errorMessage>Please enter a business justification before submitting for approval</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_change_use_case_before_del_QLs</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( ISCHANGED( Use_Case__c ) &amp;&amp; Quote_Lines_Count__c &gt; 0 , true , false )</errorConditionFormula>
+        <errorDisplayField>Use_Case__c</errorDisplayField>
+        <errorMessage>Please delete all quote lines before changing the Use Case.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SBQQ__Invalid_First_Segment_Term_End_Date</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(ISNULL(SBQQ__FirstSegmentTermEndDate__c)) &amp;&amp; NOT(ISNULL(SBQQ__StartDate__c)) &amp;&amp; (NOT(ISNULL(SBQQ__SubscriptionTerm__c)) || NOT(ISNULL(SBQQ__EndDate__c))) &amp;&amp;
+(SBQQ__FirstSegmentTermEndDate__c &lt; SBQQ__StartDate__c || IF(NOT(ISNULL(SBQQ__EndDate__c)),SBQQ__FirstSegmentTermEndDate__c &gt; SBQQ__EndDate__c, IF(LOWER($Setup.SBQQ__GeneralSettings__c.SBQQ__SubscriptionTermUnit__c)=&apos;day&apos;, SBQQ__FirstSegmentTermEndDate__c &gt; SBQQ__StartDate__c + SBQQ__SubscriptionTerm__c-1, SBQQ__FirstSegmentTermEndDate__c &gt; SBQQ__StartDate__c + (SBQQ__SubscriptionTerm__c * 30.4375))))</errorConditionFormula>
+        <errorDisplayField>SBQQ__FirstSegmentTermEndDate__c</errorDisplayField>
+        <errorMessage>First Segment Term End Date must fall between Quote Start Date and Quote End Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Subscription_Term_or_End_Date</fullName>
+        <active>true</active>
+        <description>The user can enter in either the subscription term on the end date</description>
+        <errorConditionFormula>AND ( NOT(ISBLANK( SBQQ__SubscriptionTerm__c )), 
+NOT(ISBLANK(  SBQQ__EndDate__c  )))</errorConditionFormula>
+        <errorMessage>You can enter in either the subscription term or the end date, but not both. Remove either the subscription term or the end date, and re-save the quote.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Use_Case_Description_Is_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF (TEXT( Use_Case__c ) = &apos;Other&apos; &amp;&amp;  
+ISBLANK(  Use_Case_Description__c ) , true, false)</errorConditionFormula>
+        <errorDisplayField>Use_Case_Description__c</errorDisplayField>
+        <errorMessage>Please enter a description for the use case</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Preview_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Preview Approval</masterLabel>
+        <openType>replace</openType>
+        <page>PreviewQuoteApprovals</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Recall_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Recall Approval</masterLabel>
+        <openType>replace</openType>
+        <page>RecallQuote</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__EditLines</fullName>
+        <availability>online</availability>
+        <description>Opens the page that edits quote line items.</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Edit Lines</masterLabel>
+        <openType>replace</openType>
+        <page>SBQQ__EditQuoteLines</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__GenerateDocument</fullName>
+        <availability>online</availability>
+        <description>Opens the page that starts document generation.</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Generate Document</masterLabel>
+        <openType>replace</openType>
+        <page>SBQQ__GenerateDocument</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__ImportLines</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Import Lines</masterLabel>
+        <openType>noSidebar</openType>
+        <page>SBQQ__ImportLines</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__IncludeDocument</fullName>
+        <availability>online</availability>
+        <description>Allow users to attach the PDF to the quote.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Include Document</masterLabel>
+        <openType>sidebar</openType>
+        <page>SBQQ__NewQuoteRelatedContent</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__PreviewDocument</fullName>
+        <availability>online</availability>
+        <description>Displays the page that allows to generate a preview of quote document. No Save or Save &amp; Email buttons.</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Preview Document</masterLabel>
+        <openType>replace</openType>
+        <page>SBQQ__PreviewDocument</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__RefreshMultiplePrices</fullName>
+        <availability>online</availability>
+        <description>Refreshes list prices based on currently selected pricebook on multiple quotes.</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Refresh Prices</masterLabel>
+        <openType>sidebar</openType>
+        <page>SBQQ__RefreshMultipleQuotePrices</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>SBQQ__RefreshPrices</fullName>
+        <availability>online</availability>
+        <description>Refreshes list prices based on currently selected pricebook on a single quote.</description>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Refresh Prices</masterLabel>
+        <openType>replace</openType>
+        <page>SBQQ__RefreshQuotePrices</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_for_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Submit for Approval</masterLabel>
+        <openType>replace</openType>
+        <page>SubmitQuote</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_for_Approval_New</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Submit for Approval - New</masterLabel>
+        <openType>replace</openType>
+        <page>CLDY_SubmitForApproval</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

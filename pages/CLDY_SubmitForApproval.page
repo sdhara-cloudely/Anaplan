@@ -1,0 +1,81 @@
+<apex:page standardController="SBQQ__Quote__c" showHeader="false">
+    <script type="text/javascript" src="/soap/ajax/15.0/connection.js"></script>
+    <script type="text/javascript">
+    
+    /**
+     * Initializes the call
+     */
+    function initCall() {
+    
+        try {
+            sforce.connection.sessionId = "{!$Api.Session_ID}"; //to avoid session timeout
+        } catch(e) {
+            erroralert(cERROR_UNKNOWN,e);
+        }
+    
+    }
+    
+    /**
+     * Navigates to the given url
+     * @param url the url to navigate to 
+     */
+    function navigateTo(url) {
+    top.location.replace(url);
+    }
+
+    /**
+     * Callback invoked after an agreement clone is saved
+     */
+    function submitForApproval() {
+        
+        var hasValidationError = false;
+        var validationMessage = "VALIDATION ERROR: Please enter a business justification and Submit for Approval \n";
+        
+        try {
+                
+            
+            initCall();
+            //showMsgProgress("Please wait.....);
+            quoteId = "{!SBQQ__Quote__c.Id}";
+            businessJustification = "{!SBQQ__Quote__c.Business_Justification__c}";
+            //alert(businessJustification);
+            if (businessJustification == "" || businessJustification == null)
+            {
+                hasValidationError = true;
+                alert(validationMessage);
+            }
+                
+           } 
+           catch(ex) 
+           {
+            erroralert("Status Update failed", ex);
+           } 
+           finally 
+           {
+                // go to the detail page
+                if (hasValidationError)
+                {
+                    navigateTo("/{!SBQQ__Quote__c.Id}");
+                }
+                else
+                {
+                    navigateTo("/apex/SubmitQuote?Id={!SBQQ__Quote__c.Id}");
+                }
+           }
+    }
+    
+    // register to invoke the function after the page load
+    window.onload = function() { 
+        // post save
+        submitForApproval();
+    }
+    
+    </script>
+    <apex:form >
+        <apex:outputText value="{!SBQQ__Quote__c.Id}" rendered="false"/>
+        <apex:outputText value="{!SBQQ__Quote__c.Business_Justification__c}" rendered="false"/>
+        <div id="divMain" >
+            <h1>Please wait, Submitting for approval...</h1>
+        </div>
+    </apex:form>
+</apex:page>

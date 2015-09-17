@@ -1,0 +1,139 @@
+<messaging:emailTemplate subject="Quote Approval required for {!relatedTo.Quote__r.SBQQ__BillingName__c}, ACV = {!relatedTo.Quote__r.ACV__c}" 
+    recipientType="User" 
+    relatedToType="sbaa__Approval__c"
+    replyTo="approvalemailhandler@10cjdk02p5m9p5zqa6gdglgk1w5g4lfxsgx91px4rr7me1esli.q-btjheao.cs21.apex.sandbox.salesforce.com">
+        
+<messaging:HtmlEmailBody >
+    
+<html>
+<body>
+The following quote requires your approval:
+
+<p/>
+<b>Quote Name:</b>&nbsp;<apex:outputLink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4) + '/' + relatedTo.Quote__r.Id}" >{!relatedTo.Quote__r.Name}</apex:outputLink><br/>
+<b>Opportunity Name:</b>&nbsp;<apex:outputLink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4) + '/' + relatedTo.Quote__r.SBQQ__Opportunity__r.Id}" >{!relatedTo.Quote__r.SBQQ__Opportunity__r.Name}</apex:outputLink><br/>
+<b>Opportunity Owner:</b>{!relatedTo.Quote__r.SBQQ__Opportunity__r.Owner.Name}<br/>
+<b>Business Justification:</b>{!relatedTo.Quote__r.Business_Justification__c}<br/>
+
+<!-- Approval Details -->
+<!--
+<p/>
+<b><u>Approval Details</u></b><br/>
+<b>Avg Discount (per Product):</b>{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c}<br/>
+<b>Use Case:</b>{!relatedTo.Quote__r.Use_Case__c}<br/>
+<b>Renewal ACV Increase %:</b>{!relatedTo.Quote__r.Renewal_Increase__c}<br/>
+<b>Contract Terms (months):</b>{!relatedTo.Quote__r.SBQQ__SubscriptionTerm__c}<br/>
+<b>Net ACV:</b>{!relatedTo.Quote__r.Net_Amount_ACV__c}<br/>
+<b>Payment Terms:</b>{!relatedTo.Quote__r.SBQQ__PaymentTerms__c}<br/>
+<b>Delayed Start Date:</b>{!relatedTo.Quote__r.Delayed_Start_Date__c}<br/>
+<b>Early Renewal:</b>{!relatedTo.Quote__r.Early_Renewal__c}<br/>
+<b>Price Cap (Uplift):</b>{!relatedTo.Quote__r.Price_Cap__c}<br/>
+<b>Price Hold (Add-Ons):</b>{!relatedTo.Quote__r.Price_Hold__c}<br/>
+<b>Opt Out Period:</b>{!relatedTo.Quote__r.Opt_Out_Period__c}<br/>
+<b>Phase Implementation (Ramps):</b>{!relatedTo.Quote__r.X1st_yr_ACV_50_Last_Yr_ACV__c}<br/>
+<p/>
+-->
+
+<!-- Quote Line Items -->
+<p/>
+<b>Quote Lines:</b><br/>
+<sbaa:relatedList recordId="{!relatedTo.Quote__c}" relationshipName="SBQQ__LineItems__r" fieldSetName="Approval_Request"/>
+<p/>
+
+<!-- List of Approvers -->
+<p/>
+<b>Approvals:</b><br/>
+<sbaa:relatedList recordId="{!relatedTo.Quote__c}" relationshipName="Approvals__r" fieldSetName="Email_Fields"/>
+<p/>
+
+<!-- Approval Conditions -->
+<p/>
+<p/>
+<p/>
+<b><u>Approval Conditions:</u></b><br/>
+<p/>
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 1}">
+<b>Avg Discount% (per Product):</b>{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c}%
+<apex:outputText value=" RVP Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c > 0.10}"/>
+<br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 2}">
+<b>Use Case:</b>{!relatedTo.Quote__r.Use_Case__c}
+<apex:outputText value=" Sales Ops Approval Required" rendered="{!relatedTo.Quote__r.Use_Case__c == 'n/a'}"/>
+<apex:outputText value=" No Approval Required" rendered="{!relatedTo.Quote__r.Use_Case__c <> 'n/a'}"/>
+<br/>
+<b>Renewal ACV Increase %:</b>{!relatedTo.Quote__r.Renewal_Increase__c}
+<apex:outputText value=" Sales Ops Approval Required" rendered="{!relatedTo.Quote__r.Renewal_Increase__c > 0}"/>
+<apex:outputText value=" No Approval Required" rendered="{!relatedTo.Quote__r.Renewal_Increase__c <= 0}"/>
+<br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 4}">
+<b>Contract Terms (months) / Net ACV::</b>{!relatedTo.Quote__r.SBQQ__SubscriptionTerm__c} / {!relatedTo.Quote__r.Net_Amount_ACV__c}
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.Contract_Term_Approval__c == 'MD Approval Required'}"/><br/>
+<b>Avg Discount% (per Product):</b>{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c}%
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c > 0.20}"/><br/>
+<b>Price Cap (Uplift):</b>{!relatedTo.Quote__r.Price_Cap__c}
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == ''}"/>
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '1'}"/>
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '2'}"/>
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '3'}"/>
+<apex:outputText value=" MD Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '4'}"/>
+<br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 5}">
+<b>Payment Terms:</b>{!relatedTo.Quote__r.SBQQ__PaymentTerms__c}<br/>
+<apex:outputText value=" Controller Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__PaymentTerms__c == 'Net 45'}"/>
+<apex:outputText value=" Controller Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__PaymentTerms__c == 'Net 60'}"/>
+<br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 6}">
+<b>Payment Terms:</b>{!relatedTo.Quote__r.SBQQ__PaymentTerms__c}<br/>
+<apex:outputText value=" Controller Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__PaymentTerms__c == 'Custom'}"/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 7}">
+<b>Payment Terms:</b>{!relatedTo.Quote__r.SBQQ__PaymentTerms__c}<br/>
+<apex:outputText value=" Controller Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__PaymentTerms__c == 'Net 90'}"/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 8}">
+<b>Delayed Start Date:</b>{!relatedTo.Quote__r.Delayed_Start_Date__c}
+<apex:outputText value=" CFO Approval Required" rendered="{!relatedTo.Quote__r.Delayed_Start_Date__c == 'Yes'}"/><br/>
+<b>Early Renewal:</b>{!relatedTo.Quote__r.Early_Renewal__c}
+<apex:outputText value=" CFO Approval Required" rendered="{!relatedTo.Quote__r.Early_Renewal__c == 'Yes'}"/><br/>
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!relatedTo.sbaa__ApprovalStep__c == 12}">
+<b>Contract Terms (months) / Net ACV::</b>{!relatedTo.Quote__r.SBQQ__SubscriptionTerm__c} / {!relatedTo.Quote__r.Net_Amount_ACV__c}
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Contract_Term_Approval__c == 'CEO Approval Required'}"/><br/>
+<b>Avg Discount% (per Product):</b>{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c}%
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.SBQQ__AverageCustomerDiscount__c > 0.40}"/><br/>
+<b>Price Cap (Uplift):</b>{!relatedTo.Quote__r.Price_Cap__c}
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == ''}"/>
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '1'}"/>
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '2'}"/>
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '3'}"/>
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Price_Cap__c == '4'}"/><br/>
+<b>Price Hold (Add-Ons):</b>{!relatedTo.Quote__r.Price_Hold__c}
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Price_Hold__c = '>40%'}"/><br/>
+<b>Opt Out Period:</b>{!relatedTo.Quote__r.Opt_Out_Period__c}
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.Opt_Out_Period__c <> ''}"/><br/>
+<b>Phase Implementation (Ramps):</b>{!relatedTo.Quote__r.X1st_yr_ACV_50_Last_Yr_ACV__c}
+<apex:outputText value=" CEO Approval Required" rendered="{!relatedTo.Quote__r.X1st_yr_ACV_50_Last_Yr_ACV__c > 0.4}"/><br/>
+</apex:outputPanel>
+<!-- End of Approval Conditions -->
+
+
+<p/><b>Next Step:</b> To approve or reject this request, reply to this email with the word APPROVE, APPROVED, YES, REJECT, REJECTED, or NO in the first line of the email message, or click on one these links:&nbsp;&nbsp;<apex:outputLink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+'apex/SBAA__Approve?id='+relatedTo.Id}">Approve</apex:outputLink>&nbsp;&nbsp;&nbsp;<apex:outputLink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+'apex/SBAA__Reject?id='+relatedTo.Id}">Reject</apex:outputLink><br/> 
+
+
+<p style="color:white"><apex:outputText value="{!relatedTo.Id}"/></p>
+
+</body>
+</html>
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>
